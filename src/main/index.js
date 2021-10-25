@@ -6,23 +6,17 @@ function main(self) {
   if (status == "attack") {
   } else {
     if (self.cursors.left.isDown) {
-      hero.fliprtl__lock = true;
       hero.direction = -1;
       hero.setFlipX(true, false);
       hero.x -= hero.move_speed;
       play(hero, "move");
-      if (!hero.flipltr__lock) return;
-      hero.displayOriginX -= 358;
-      hero.flipltr__lock = false;
+      hero.displayOriginX = 358;
     } else if (self.cursors.right.isDown) {
-      hero.flipltr__lock = true;
       hero.direction = 1;
       hero.setFlipX(false, false);
       hero.x += hero.move_speed;
       play(hero, "move");
-      if (!hero.fliprtl__lock) return;
-      hero.displayOriginX += 358;
-      hero.fliprtl__lock = false;
+      hero.displayOriginX = 33.5;
     } else {
       play(hero, "idle");
     }

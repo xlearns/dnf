@@ -19,8 +19,6 @@ function loadHero(name, self) {
   res.direction = 1;
   res.status = "idle";
   res.move_speed = 1;
-  res.flipltr__lock = true;
-  res.fliprtl__lock = false;
   res.setOrigin(0.5, 1);
   res.setDepth(1);
   setOffset(res, self);
